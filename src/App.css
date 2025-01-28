@@ -1,2 +1,28 @@
 /* src/index.css */
 @import "tailwindcss";
+
+/* index.css */
+.custom-light-blue {
+  background-color: #f3fafb;
+}
+.custom-orange {
+  fill: #F39A57;
+}
+.filter-orange {
+  filter: hue-rotate(15deg) saturate(120%);
+  fill: orange;
+}
+
+.relative {
+  position: relative;
+}
+.z-10 {
+  z-index: 10;
+}
+.mt-20 {
+  margin-top: 5rem; 
+}
+
+.-mt-20 {
+  margin-top: -5rem;
+}

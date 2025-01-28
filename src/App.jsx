@@ -1,10 +1,11 @@
-// src/App.jsx
+import Topbar from "./components/Topbar";
+import OrderTracking from "./components/OrderTracking";
+
 function App() {
   return (
-    <div className="bg-red-950 flex justify-center items-center">
-      <h1 className="text-4xl font-bold text-blue-500">
-        Hello, Tailwind CSS is working!
-      </h1>
+    <div className="App w-full custom-light-blue">
+      <Topbar />
+      <OrderTracking />
     </div>
   );
 }
