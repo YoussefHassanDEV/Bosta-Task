@@ -49,7 +49,6 @@ const TrackingDetails = ({ trackingData, showMore }) => {
                 return (
                   <div key={eventIndex} className="pl-4 border my-2 rounded-sm p-2 border-gray-200">
                     <p className="text-sm text-gray-800">
-                      {console.log(`Attempting to translate: states.${event.state}`)} 
                       {t(`states.${event.state}`, {
                         defaultValue: event.state,
                       })}
