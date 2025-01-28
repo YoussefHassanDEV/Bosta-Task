@@ -1,0 +1,36 @@
+{
+  "order": "طلب",
+  "arrivingBy": "الوصول بحلول",
+  "yourOrderExpected": "من المتوقع أن يصل طلبك خلال",
+  "workingDays": "أيام عمل",
+  "noDays": "لا توجد أيام محددة",
+  "showMore": "عرض المزيد",
+  "showLess": "عرض أقل",
+  "pickedUp": "تم الاستلام",
+  "processing": "جارٍ المعالجة",
+  "outForDelivery": "قيد التوصيل",
+  "delivered": "تم التوصيل",
+  "yourOrderIsExpectedToArriveWithin": "من المتوقع أن يصل طلبك خلال",
+  "days": "يوم/أيام",
+  "trackingDetails": "تفاصيل التتبع",
+  "noTrackingDetailsAvailable": "لا تتوفر تفاصيل تتبع",
+  "orderCreated": "تم إنشاء طلبك، وستقوم بوستا بالتقاطه بمجرد أن يكون الشاحن جاهزًا",
+  "orderReceivedAtWarehouse": "تم استلام الطلب في مستودعات بوستا ويجري معالجته.",
+  "orderPreparedForDelivery": "يتم تجهيز الطلب للتوصيل.",
+  "orderOutForDelivery": "الطلب قيد التوصيل",
+  "orderRescheduled": "تمت إعادة جدولة الطلب لأنك لم تكن متاحًا على الهاتف",
+  "states": {
+    "ORDER_CREATED": "تم إنشاء طلبك، وستقوم بوستا بالتقاطه بمجرد أن يكون الشاحن جاهزًا",
+    "ORDER_RECEIVED_AT_WAREHOUSE": "تم استلام الطلب في مستودعات بوستا ويجري معالجته.",
+    "ORDER_PREPARED_FOR_DELIVERY": "يتم تجهيز الطلب للتوصيل.",
+    "ORDER_OUT_FOR_DELIVERY": "الطلب في طريقه للتوصيل",
+    "ORDER_RESCHEDULED": "تم إعادة جدولة الطلب لأننا لم نتمكن من الوصول إليك عبر الهاتف",
+    "Your order is created, Bosta will pick it up once your shipper is ready": "تم إنشاء طلبك، ستقوم بوستا بالتقاطه بمجرد أن يصبح الشاحن جاهزًا.",
+    "Order is received at Bosta warehouses and being processed": "تم استلام الطلب في مستودعات بوستا وهو قيد المعالجة.",
+    "Order is being prepared for delivery": "يتم تحضير الطلب للتسليم.",
+    "Order is out for delivery": "الطلب في طريقه للتسليم.",
+    "Order is rescheduled as you were not reachable on the phone": "تم إعادة جدولة الطلب لأنك لم تكن متاحًا على الهاتف."
+
+  },
+  "reasons": {}
+}

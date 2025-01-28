@@ -1,49 +1,84 @@
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 const TrackingDetails = ({ trackingData, showMore }) => {
+  const { t, i18n } = useTranslation();
+
+  const groupedEvents = trackingData?.TransitEvents?.reduce((acc, event) => {
+    const eventDate = new Date(event.timestamp).toLocaleDateString(i18n.language, {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+
+    if (!acc[eventDate]) {
+      acc[eventDate] = [];
+    }
+
+    acc[eventDate].push(event);
+    return acc;
+  }, {});
+
+  const visibleEvents = Object.entries(groupedEvents || {}).slice(0, showMore ? undefined : 4);
+
   return (
     <ol
-      className={`relative text-gray-500 border-l-2 border-gray-200 ${
+      className={`relative text-gray-500 border-none ${
         showMore ? "max-h-full" : "max-h-48 overflow-y-clip"
       } transition-all duration-500`}
     >
-      {trackingData?.TransitEvents && trackingData.TransitEvents.length > 0 ? (
-        trackingData.TransitEvents.map((event, index) => (
-          <li key={index} className="mb-10 ml-6">
-            <span
-              className={`absolute flex items-center justify-center w-8 h-8 rounded-full -start-4 ring-4 ring-white ${
-                index % 2 === 0 ? "bg-green-200" : "bg-gray-100"
-              }`}
-            >
-              <svg
-                className={`w-3.5 h-3.5 ${
-                  index % 2 === 0 ? "text-green-500" : "text-gray-500"
-                }`}
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 16 12"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5.917 5.724 10.5 15 1.5"
-                />
-              </svg>
-            </span>
-            <h3 className="font-medium leading-tight">{event.state}</h3>
-            <p className="text-sm">
-              {new Date(event.timestamp).toLocaleString()}
-            </p>
-            <p className="text-xs text-gray-500">
-              {event.hub || event.location}
-            </p>
+      <div className="mb-3 text-md font-semibold">{t("trackingDetails")}</div>
+
+      {groupedEvents && Object.keys(groupedEvents).length > 0 ? (
+        visibleEvents.map(([date, events], index) => (
+          <li key={index} className="w-2xl mb-4">
+            <div className="flex items-center">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full ring-4 ring-white bg-gray-300"></span>
+              <h3 className="font-medium leading-tight ml-4">{date}</h3>
+            </div>
+
+            <div className="ml-2 border-l-2 border-gray-300 pl-4">
+              {events.map((event, eventIndex) => {
+                const formattedTime = new Date(event.timestamp).toLocaleTimeString(i18n.language, {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: true,
+                });
+
+                return (
+                  <div key={eventIndex} className="pl-4 border my-2 rounded-sm p-2 border-gray-200">
+                    <p className="text-sm text-gray-800">
+                      {console.log(`Attempting to translate: states.${event.state}`)} 
+                      {t(`states.${event.state}`, {
+                        defaultValue: event.state,
+                      })}
+                    </p>
+
+                    <div className="flex">
+                      <p className="text-sm font-semibold text-gray-400">{formattedTime}</p>
+                      {(event.hub || event.location) && (
+                        <p className="text-sm font-semibold text-gray-400 ml-2">
+                          • {event.hub || event.location}
+                        </p>
+                      )}
+                    </div>
+
+                    {event.reason && (
+                      <p className="text-sm text-red-500">
+                        {t(`reasons.${event.reason}`, {
+                          defaultValue: event.reason,
+                        })}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </li>
         ))
       ) : (
-        <p className="text-gray-500">No tracking details available.</p>
+        <p className="text-gray-500">{t("noTrackingDetailsAvailable")}</p>
       )}
 
       {!showMore && (

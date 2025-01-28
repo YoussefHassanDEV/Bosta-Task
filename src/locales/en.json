@@ -1,0 +1,36 @@
+{
+  "order": "Order",
+  "arrivingBy": "Arriving by",
+  "yourOrderExpected": "Your order is expected to arrive within",
+  "workingDays": "working day(s)",
+  "noDays": "No specific days available",
+  "showMore": "Show More",
+  "showLess": "Show Less",
+  "pickedUp": "Picked Up",
+  "processing": "Processing",
+  "outForDelivery": "Out for Delivery",
+  "delivered": "Delivered",
+  "yourOrderIsExpectedToArriveWithin": "Your order is expected to arrive within",
+  "days": "day(s)",
+  "trackingDetails": "Tracking details",
+  "noTrackingDetailsAvailable": "No tracking details available",
+  "orderCreated": "Your order is created, Bosta will pick it up once your shipper is ready",
+  "orderReceivedAtWarehouse": "Order is received at Bosta warehouses and being processed.",
+  "orderPreparedForDelivery": "Order is being prepared for delivery.",
+  "orderOutForDelivery": "Order is out for delivery",
+  "orderRescheduled": "Order is rescheduled as you were not reachable on the phone",
+  "states": {
+    "ORDER_CREATED": "Your order is created, Bosta will pick it up once your shipper is ready",
+    "ORDER_RECEIVED_AT_WAREHOUSE": "Order is received at Bosta warehouses and being processed.",
+    "ORDER_PREPARED_FOR_DELIVERY": "Order is being prepared for delivery.",
+    "ORDER_OUT_FOR_DELIVERY": "Order is out for delivery",
+    "ORDER_RESCHEDULED": "Order is rescheduled as you were not reachable on the phone",
+    "Your order is created, Bosta will pick it up once your shipper is ready": "Your order is created, Bosta will pick it up once your shipper is ready",
+    "Order is received at Bosta warehouses and being processed": "Order is received at Bosta warehouses and being processed.",
+    "Order is being prepared for delivery": "Order is being prepared for delivery.",
+    "Order is out for delivery": "Order is out for delivery",
+    "Order is rescheduled as you were not reachable on the phone": "Order is rescheduled as you were not reachable on the phone"
+    
+  },
+  "reasons": {}
+}
