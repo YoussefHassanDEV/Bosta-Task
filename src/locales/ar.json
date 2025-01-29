@@ -1,4 +1,5 @@
 {
+  "Track Your Order":"تتبع طلبك",
   "order": "طلب",
   "arrivingBy": "الوصول بحلول",
   "yourOrderExpected": "من المتوقع أن يصل طلبك خلال",
@@ -13,6 +14,7 @@
   "yourOrderIsExpectedToArriveWithin": "من المتوقع أن يصل طلبك خلال",
   "days": "يوم/أيام",
   "trackingDetails": "تفاصيل التتبع",
+  "enterOrderNumber":"أدخل رقم الطلب",
   "noTrackingDetailsAvailable": "لا تتوفر تفاصيل تتبع",
   "orderCreated": "تم إنشاء طلبك، وستقوم بوستا بالتقاطه بمجرد أن يكون الشاحن جاهزًا",
   "orderReceivedAtWarehouse": "تم استلام الطلب في مستودعات بوستا ويجري معالجته.",
@@ -26,11 +28,10 @@
     "ORDER_OUT_FOR_DELIVERY": "الطلب في طريقه للتوصيل",
     "ORDER_RESCHEDULED": "تم إعادة جدولة الطلب لأننا لم نتمكن من الوصول إليك عبر الهاتف",
     "Your order is created, Bosta will pick it up once your shipper is ready": "تم إنشاء طلبك، ستقوم بوستا بالتقاطه بمجرد أن يصبح الشاحن جاهزًا.",
-    "Order is received at Bosta warehouses and being processed": "تم استلام الطلب في مستودعات بوستا وهو قيد المعالجة.",
-    "Order is being prepared for delivery": "يتم تحضير الطلب للتسليم.",
+    "Order is received at Bosta warehouses and being processed.": "تم استلام الطلب في مستودعات بوستا وهو قيد المعالجة.",
+    "Order is being prepared for delivery.": "يتم تحضير الطلب للتسليم.",
     "Order is out for delivery": "الطلب في طريقه للتسليم.",
     "Order is rescheduled as you were not reachable on the phone": "تم إعادة جدولة الطلب لأنك لم تكن متاحًا على الهاتف."
-
   },
   "reasons": {}
 }

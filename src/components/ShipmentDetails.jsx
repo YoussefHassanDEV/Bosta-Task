@@ -33,38 +33,38 @@ const ShipmentDetails = ({ trackingData, showMore, handleShowMore }) => {
   );
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="mb-6 p-3 border border-gray-300 rounded-md">
+    <div className=" w-64 mx-auto  md:w-2xl lg:w-2xl xl:w-4xl 2xl:w-5xl">
+      <div className="bg-white mb-6 p-3 border border-gray-300 rounded-md ">
         <h2 className="text-sm text-gray-500 font-normal mb-1">
           ORDER #{trackingData.TrackingNumber}
         </h2>
         <div
-          className={`text-[#0098a5] mb-1 flex font-bold ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}
+          className={`text-[#0098a5] mb-1 flex font-bold `}
         >
-          <div className="text-black">&nbsp;{t('arrivingBy')}&nbsp; </div>
+          <div className="text-black">&nbsp;{t("arrivingBy")}&nbsp; </div>
           {formatDate(trackingData.PromisedDate, i18n.language)}
         </div>
         <div className="text-gray-600 text-sm">
           {calculateDaysDifference(trackingData.PromisedDate) >= 1 ? (
             <>
-              <p>{t('yourOrderIsExpectedToArriveWithin')}</p>
+              <p>{t("yourOrderIsExpectedToArriveWithin")}</p>
               <p>
                 {calculateDaysDifference(trackingData.PromisedDate)} working
-                {t('days')}
+                {t("days")}
               </p>
             </>
           ) : (
             <p></p>
           )}
 
-          <div className="flex items-center justify-between mb-8 relative">
+          <div className="flex mx-auto mb-8 relative w-60 md:w-xl xl:w-3xl">
             {shipmentStages.map((stage, index) => (
               <div
                 key={stage.id}
-                className="flex flex-col items-center relative z-10 w-1/4 mt-1"
+                className="flex flex-col items-center   relative z-10 w-1/4 mt-1 "
               >
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center 
+                  className={`w-7 h-7 rounded-full flex items-center justify-center  
               ${
                 index <= currentStageIndex
                   ? "bg-[#0098a5] text-white border"
@@ -88,7 +88,7 @@ const ShipmentDetails = ({ trackingData, showMore, handleShowMore }) => {
                   </svg>
                 </div>
                 <div
-                  className={`text-sm mt-2 text-center
+                  className={` mt-2 text-center  
               ${
                 index <= currentStageIndex ? "text-[#0098a5]" : "text-gray-500"
               }`}
@@ -97,7 +97,7 @@ const ShipmentDetails = ({ trackingData, showMore, handleShowMore }) => {
                 </div>
               </div>
             ))}
-            <div className="absolute top-4 right-20 w-full">
+            <div className="absolute top-4 right-8 w-60 md:w-xl md:right-20 xl:w-3xl">
               {[...Array(3)].map((_, sectionIndex) => {
                 const isTransitionLine = sectionIndex === currentStageIndex;
 
@@ -167,9 +167,9 @@ const ShipmentDetails = ({ trackingData, showMore, handleShowMore }) => {
       <div className="flex justify-center mt-4">
         <button
           onClick={handleShowMore}
-          className="px-4 py-2 bg-[#0098a5] text-white rounded-md"
+          className="px-4 py-2 text-[#0098a5] rounded-md"
         >
-          {showMore ? t('showLess') : t('showMore')}
+          {showMore ? ` ${t("showLess")} ˄` : `${t("showMore")} ˅`}
         </button>
       </div>
     </div>

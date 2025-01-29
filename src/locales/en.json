@@ -30,7 +30,7 @@
     "Order is being prepared for delivery": "Order is being prepared for delivery.",
     "Order is out for delivery": "Order is out for delivery",
     "Order is rescheduled as you were not reachable on the phone": "Order is rescheduled as you were not reachable on the phone"
-    
+    , "enterOrderNumber": "Enter order number"
   },
   "reasons": {}
 }
