@@ -7,3 +7,4 @@ export default defineConfig({
   plugins: [react(),tailwindcss(),svgr()],
   base: "/Bosta-Task/"
 })
+//testing
