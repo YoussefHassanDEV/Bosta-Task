@@ -44,7 +44,7 @@ const OrderTracking = () => {
           />
         </div>
         {(trackingData || error) && (
-          <div className="mx-auto  p-10 rounded-lg  w-72 sm:w-xl md:w-5xl lg:w-6xl 2xl:w-7xl">
+          <div className="mx-auto  p-10 rounded-lg   w-72 sm:w-xl md:w-5xl lg:w-6xl 2xl:w-7xl">
             {isLoading && (
               <p data-testid="loading-state" className="text-center">
                 {t("loading")}

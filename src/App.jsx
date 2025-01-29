@@ -5,6 +5,7 @@ import Topbar from "./components/Topbar";
 import ShipmentDetails from "./components/ShipmentDetails";
 
 const App = () => {
+  const [toggle, setToggle] = useState(localStorage.getItem("theme") || "light");
   const { t } = useTranslation();
   const [trackingNumber, setTrackingNumber] = useState("");
   const [trackingData, setTrackingData] = useState(null);
@@ -42,9 +43,12 @@ const App = () => {
     });
 
   return (
-    <div className="t">
-      <div className="custom-light-blue w-full h-fit">
+    <div className={` ${toggle === "light" ? "" : "bg-gray-700 text-white"
+      }`}>
+      <div className="custom-light-blue w-full ">
         <Topbar
+          toggle={toggle}
+          setToggle={setToggle}
           changeLanguage={(lang) => i18n.changeLanguage(lang)}
           trackingNumber={trackingNumber}
           setTrackingNumber={setTrackingNumber}
@@ -52,17 +56,20 @@ const App = () => {
         />
       </div>
 
-      <div className="mx-auto mt-6 w-full bg-white">
+      <div className={`mx-auto mt-6 min-h-96  w-full ${toggle === "light" ? "" : "bg-gray-600 text-white"
+        }`}>
         {(trackingData || error) && (
           <div className="p-4">
             {isLoading && <p className="text-center">{t("loading")}</p>}
             {error && <p className="text-red-600 text-center">{error}</p>}
             {trackingData && (
               <ShipmentDetails
+                toggle={toggle}
+                setToggle={setToggle}
                 state={trackingData.CurrentStatus?.state}
                 trackingData={trackingData}
-                showMore={showMore} 
-                handleShowMore={handleShowMore} 
+                showMore={showMore}
+                handleShowMore={handleShowMore}
               />
             )}
           </div>
