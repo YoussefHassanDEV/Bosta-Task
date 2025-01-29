@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div className="t">
-      <div className="custom-light-blue w-screen h-fit">
+      <div className="custom-light-blue w-full h-fit">
         <Topbar
           changeLanguage={(lang) => i18n.changeLanguage(lang)}
           trackingNumber={trackingNumber}
@@ -52,7 +52,7 @@ const App = () => {
         />
       </div>
 
-      <div className="mx-auto mt-6 w-screen max-w-6xl bg-white">
+      <div className="mx-auto mt-6 w-full bg-white">
         {(trackingData || error) && (
           <div className="p-4">
             {isLoading && <p className="text-center">{t("loading")}</p>}
