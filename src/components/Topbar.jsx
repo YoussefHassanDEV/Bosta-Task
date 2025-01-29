@@ -48,12 +48,12 @@ const Topbar = ({ changeLanguage, trackingNumber, setTrackingNumber, handleSearc
           </button>
           <div className={`flex items-center space-x-2${toggle === "light" ? " text-black" : " text-white"}`}>
             <select
-              className="p-1 text-sm"
+              className={`p-1 text-sm ${toggle === "light" ? " text-black" : " text-white"}`}
               onChange={handleLanguageChange}
               defaultValue={i18n.language}
             >
-              <option value="en">English</option>
-              <option value="ar">عربي</option>
+              <option value="en" className="text-black">English</option>
+              <option value="ar" className="text-black">عربي</option>
             </select>
           </div>
           <div className="flex items-center justify-center">
