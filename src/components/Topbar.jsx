@@ -16,7 +16,7 @@ const Topbar = ({ changeLanguage, trackingNumber, setTrackingNumber, handleSearc
   return (
     <div className="w-screen mx-auto bg-custom-light-blue h-fit">
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-6xl flex items-center justify-between px-6 py-3">
+        <div className="w-full max-w-6xl flex items-center justify-around px-6 py-3">
           <div className="flex items-center space-x-2">
             <select
               className="p-1 text-sm"
