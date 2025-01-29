@@ -17,7 +17,7 @@ const Topbar = ({ changeLanguage, trackingNumber, setTrackingNumber, handleSearc
   };
 
   return (
-    <div className={`w-full mx-auto h-fit ${toggle === "light" ? "bg-custom-light-blue text-black" : "bg-gray-700 text-white"}`}>
+    <div className={`w-full mx-auto min-h-64 h-fit ${toggle === "light" ? "bg-custom-light-blue text-black" : "bg-gray-700 text-white"}`}>
       <div className="w-full flex justify-center">
         <div className="w-full max-w-6xl flex items-center justify-around px-6 py-3">
           <button

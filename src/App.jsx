@@ -56,7 +56,7 @@ const App = () => {
         />
       </div>
 
-      <div className={`mx-auto mt-6 min-h-96  w-full ${toggle === "light" ? "" : "bg-gray-600 text-white"
+      <div className={`mx-auto mt-6 min-h-screen  w-full ${toggle === "light" ? "" : "bg-gray-600 text-white"
         }`}>
         {(trackingData || error) && (
           <div className="p-4">
